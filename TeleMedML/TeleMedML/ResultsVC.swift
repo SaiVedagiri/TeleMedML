@@ -11,6 +11,7 @@ import UIKit
 class ResultsVC: UIViewController {
     
     var showBtn = false
+    var hashVal = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()

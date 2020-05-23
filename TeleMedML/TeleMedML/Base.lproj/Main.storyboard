@@ -202,7 +202,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EF6-vu-y45" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2913" y="-590"/>
+            <point key="canvasLocation" x="2954" y="-590"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q1i-sW-hrR">
@@ -233,6 +233,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="98" minValue="95" maxValue="105" translatesAutoresizingMaskIntoConstraints="NO" id="SeB-7Y-xSX">
                                 <rect key="frame" x="-2" y="191" width="418" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="SliderChanged:" destination="fP8-HG-OOh" eventType="valueChanged" id="Bbj-OV-7tM"/>
+                                </connections>
                             </slider>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OBV-yU-as8">
                                 <rect key="frame" x="0.0" y="267" width="414" height="32"/>
@@ -328,6 +331,9 @@
                                 <rect key="frame" x="185" y="757" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Check"/>
+                                <connections>
+                                    <action selector="Check:" destination="fP8-HG-OOh" eventType="touchUpInside" id="azH-5S-wJG"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4ZZ-HM-eod">
                                 <rect key="frame" x="20" y="629" width="374" height="128"/>
@@ -350,7 +356,7 @@
                         <outlet property="Symptoms" destination="4ZZ-HM-eod" id="s0y-a3-kCK"/>
                         <outlet property="TempEntry" destination="dNW-PR-Ut2" id="I5w-4z-02U"/>
                         <outlet property="TempSlider" destination="SeB-7Y-xSX" id="dN7-AX-jmg"/>
-                        <segue destination="KrU-W1-PmL" kind="show" id="FfO-De-AUW"/>
+                        <segue destination="KrU-W1-PmL" kind="show" identifier="results" id="FfO-De-AUW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pkm-hE-ebB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -359,6 +365,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FfO-De-AUW"/>
+        <segue reference="Chg-Ac-rPB"/>
     </inferredMetricsTieBreakers>
 </document>
