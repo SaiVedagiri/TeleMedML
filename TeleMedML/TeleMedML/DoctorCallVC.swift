@@ -7,24 +7,34 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class DoctorCallVC: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        playVideo()
+        NotificationCenter.default.addObserver(self, selector: #selector(videoDidEnd), name:
+        NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+    }
 
-        // Do any additional setup after loading the view.
+    private func playVideo() {
+        guard let path = Bundle.main.path(forResource: "tmmTest", ofType:"mov") else {
+            debugPrint("video.m4v not found")
+            return
+        }
+        let player = AVPlayer(url: URL(fileURLWithPath: path))
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        present(playerController, animated: true) {
+            player.play()
+            
+        }
     }
     
+    @objc func videoDidEnd(notification: NSNotification) {
+       _ = navigationController?.popViewController(animated: true)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
 }
