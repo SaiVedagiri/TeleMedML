@@ -103,6 +103,7 @@ class SymptomsVC: UIViewController {
         if segue.identifier == "results" {
             let ResultsVC = segue.destination as! ResultsVC
             ResultsVC.hashVal = returnHash
+            ResultsVC.showBtn = true
         }
     }
     

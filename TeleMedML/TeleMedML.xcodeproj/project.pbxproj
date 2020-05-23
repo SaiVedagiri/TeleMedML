@@ -22,6 +22,8 @@
 		42E64D23247989AA00242A78 /* PatientCallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64D22247989AA00242A78 /* PatientCallVC.swift */; };
 		42E64D2924798D2600242A78 /* HistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64D2824798D2600242A78 /* HistoryTVC.swift */; };
 		42E64D2B24798D3E00242A78 /* SymptomsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64D2A24798D3E00242A78 /* SymptomsVC.swift */; };
+		42E64D302479D42600242A78 /* TeleMedML.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E64D2F2479D42500242A78 /* TeleMedML.png */; };
+		42E64D322479D4F300242A78 /* tmmTest.mov in Resources */ = {isa = PBXBuildFile; fileRef = 42E64D312479D4F300242A78 /* tmmTest.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		42E64D22247989AA00242A78 /* PatientCallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCallVC.swift; sourceTree = "<group>"; };
 		42E64D2824798D2600242A78 /* HistoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryTVC.swift; path = TeleMedML/HistoryTVC.swift; sourceTree = "<group>"; };
 		42E64D2A24798D3E00242A78 /* SymptomsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsVC.swift; sourceTree = "<group>"; };
+		42E64D2F2479D42500242A78 /* TeleMedML.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TeleMedML.png; path = ../../../../../Downloads/TeleMedML.png; sourceTree = "<group>"; };
+		42E64D312479D4F300242A78 /* tmmTest.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = tmmTest.mov; path = ../../../../../Desktop/tmmTest.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 		42E64CE32479855B00242A78 /* TeleMedML */ = {
 			isa = PBXGroup;
 			children = (
+				42E64D312479D4F300242A78 /* tmmTest.mov */,
+				42E64D2F2479D42500242A78 /* TeleMedML.png */,
 				42E64CE42479855B00242A78 /* AppDelegate.swift */,
 				42E64CE62479855B00242A78 /* SceneDelegate.swift */,
 				42E64CEA2479855B00242A78 /* Main.storyboard */,
@@ -253,7 +259,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E64D322479D4F300242A78 /* tmmTest.mov in Resources */,
 				42E64CF12479855E00242A78 /* LaunchScreen.storyboard in Resources */,
+				42E64D302479D42600242A78 /* TeleMedML.png in Resources */,
 				42E64CEE2479855E00242A78 /* Assets.xcassets in Resources */,
 				42E64CEC2479855B00242A78 /* Main.storyboard in Resources */,
 			);
