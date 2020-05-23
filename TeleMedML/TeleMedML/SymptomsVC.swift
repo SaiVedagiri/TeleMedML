@@ -9,12 +9,23 @@
 import UIKit
 
 class SymptomsVC: UIViewController {
-
+    
+    
+    @IBOutlet weak var TempEntry: UITextField!
+    @IBOutlet weak var TempSlider: UISlider!
+    
+    @IBOutlet weak var Headache: UISegmentedControl!
+    @IBOutlet weak var Cough: UISegmentedControl!
+    @IBOutlet weak var Sneezing: UISegmentedControl!
+    @IBOutlet weak var Congestion: UISegmentedControl!
+    
+    @IBOutlet weak var Symptoms: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
+    
+    
     
 
     /*

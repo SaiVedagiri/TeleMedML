@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TeleMedML" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="TeleMedML" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,6 +31,9 @@
                                 <rect key="frame" x="184" y="391" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="EnterClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4eN-cD-Y3R"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -38,18 +41,20 @@
                     </view>
                     <navigationItem key="navigationItem" id="YBf-zR-o1i"/>
                     <connections>
-                        <segue destination="Rct-Dw-hKu" kind="show" id="DCd-CZ-ocR"/>
-                        <segue destination="XoI-IC-MAN" kind="show" id="QZ9-ZH-eSg"/>
+                        <outlet property="Password" destination="zAh-dP-1sX" id="XAr-MN-YEb"/>
+                        <outlet property="Username" destination="qNU-kp-l9c" id="N0m-o2-dfF"/>
+                        <segue destination="Rct-Dw-hKu" kind="show" identifier="patientlogin" id="DCd-CZ-ocR"/>
+                        <segue destination="XoI-IC-MAN" kind="show" identifier="doctorlogin" id="QZ9-ZH-eSg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="760.86956521739137" y="251.78571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Doctor WelcomeVC-->
         <scene sceneID="gJX-Cd-nn0">
             <objects>
-                <viewController id="XoI-IC-MAN" sceneMemberID="viewController">
+                <viewController id="XoI-IC-MAN" customClass="DoctorWelcomeVC" customModule="TeleMedML" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zBE-E9-HPf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="1948" y="834"/>
         </scene>
-        <!--View Controller-->
+        <!--Doctor CallVC-->
         <scene sceneID="p20-Ru-VsV">
             <objects>
-                <viewController id="1DE-j2-x6C" sceneMemberID="viewController">
+                <viewController id="1DE-j2-x6C" customClass="DoctorCallVC" customModule="TeleMedML" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wIF-c2-8m9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,13 +86,38 @@
             </objects>
             <point key="canvasLocation" x="2788" y="836"/>
         </scene>
-        <!--View Controller-->
+        <!--Patient WelcomeVC-->
         <scene sceneID="enJ-p9-M11">
             <objects>
-                <viewController id="Rct-Dw-hKu" sceneMemberID="viewController">
+                <viewController id="Rct-Dw-hKu" customClass="PatientWelcomeVC" customModule="TeleMedML" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NlN-Wt-tOb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLb-9f-k6g">
+                                <rect key="frame" x="0.0" y="257" width="414" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome back to TeleMedML" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRA-3v-Npl">
+                                <rect key="frame" x="0.0" y="186" width="414" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyF-tG-bpv">
+                                <rect key="frame" x="145" y="567" width="125" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="SendData:" destination="Rct-Dw-hKu" eventType="touchUpInside" id="0ow-GU-6lN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Rc7-q2-AkQ"/>
                     </view>
@@ -99,17 +129,18 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="fP8-HG-OOh" kind="show" id="doc-vq-RZg"/>
+                        <outlet property="PatientLabel" destination="tLb-9f-k6g" id="HO1-P9-vpA"/>
+                        <segue destination="fP8-HG-OOh" kind="show" identifier="sendData" id="doc-vq-RZg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPE-FP-uas" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1947.826086956522" y="-91.071428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--ResultsVC-->
         <scene sceneID="Gjo-VD-e0P">
             <objects>
-                <viewController id="KrU-W1-PmL" sceneMemberID="viewController">
+                <viewController id="KrU-W1-PmL" customClass="ResultsVC" customModule="TeleMedML" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9al-RK-JVj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,10 +156,10 @@
             </objects>
             <point key="canvasLocation" x="4225" y="-275"/>
         </scene>
-        <!--View Controller-->
+        <!--Patient CallVC-->
         <scene sceneID="RUo-Ee-TgC">
             <objects>
-                <viewController id="Dez-Nc-wgh" sceneMemberID="viewController">
+                <viewController id="Dez-Nc-wgh" customClass="PatientCallVC" customModule="TeleMedML" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qPd-9g-LKZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="5200" y="-275"/>
         </scene>
-        <!--Table View Controller-->
+        <!--HistoryTVC-->
         <scene sceneID="Qe0-fv-vJ8">
             <objects>
-                <tableViewController id="4la-jx-0nw" sceneMemberID="viewController">
+                <tableViewController id="4la-jx-0nw" customClass="HistoryTVC" customModule="TeleMedML" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1Il-e0-1tD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,7 +189,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="KrU-W1-PmL" kind="show" id="Chg-Ac-rPB"/>
+                                    <segue destination="KrU-W1-PmL" kind="show" identifier="btnClick" id="Chg-Ac-rPB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -194,12 +225,12 @@
         <!--SymptomsVC-->
         <scene sceneID="u7d-14-NZx">
             <objects>
-                <viewController id="fP8-HG-OOh" customClass="SymptomsVC" customModule="SymptoDoc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fP8-HG-OOh" customClass="SymptomsVC" customModule="TeleMedML" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Apq-2N-ECI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SeB-7Y-xSX">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="98" minValue="95" maxValue="105" translatesAutoresizingMaskIntoConstraints="NO" id="SeB-7Y-xSX">
                                 <rect key="frame" x="-2" y="191" width="418" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
@@ -261,7 +292,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other Description (Optional)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56e-oW-OM5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other Symptoms (CSV)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56e-oW-OM5">
                                 <rect key="frame" x="0.0" y="584" width="414" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.16906562450000001" green="0.72283101080000001" blue="0.83967643979999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -312,6 +343,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="dg2-Vu-3eS"/>
                     <connections>
+                        <outlet property="Congestion" destination="kRl-2N-Jmq" id="CKi-FE-FID"/>
+                        <outlet property="Cough" destination="LRY-QQ-zCI" id="gv0-KS-0KU"/>
+                        <outlet property="Headache" destination="OBV-yU-as8" id="BJn-nS-wXF"/>
+                        <outlet property="Sneezing" destination="uLq-tQ-MGV" id="TZh-It-gFh"/>
+                        <outlet property="Symptoms" destination="4ZZ-HM-eod" id="s0y-a3-kCK"/>
+                        <outlet property="TempEntry" destination="dNW-PR-Ut2" id="I5w-4z-02U"/>
+                        <outlet property="TempSlider" destination="SeB-7Y-xSX" id="dN7-AX-jmg"/>
                         <segue destination="KrU-W1-PmL" kind="show" id="FfO-De-AUW"/>
                     </connections>
                 </viewController>

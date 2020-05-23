@@ -9,6 +9,8 @@
 import UIKit
 
 class DoctorWelcomeVC: UIViewController {
+    
+    var name = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -17,11 +17,11 @@
 		42E64D152479890C00242A78 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64D142479890C00242A78 /* LoginVC.swift */; };
 		42E64D172479891E00242A78 /* PatientWelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64D162479891E00242A78 /* PatientWelcomeVC.swift */; };
 		42E64D192479892E00242A78 /* DoctorWelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64D182479892E00242A78 /* DoctorWelcomeVC.swift */; };
-		42E64D1B2479894000242A78 /* HistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64D1A2479894000242A78 /* HistoryTVC.swift */; };
-		42E64D1D2479896800242A78 /* SymptomsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64D1C2479896800242A78 /* SymptomsVC.swift */; };
 		42E64D1F2479899000242A78 /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64D1E2479899000242A78 /* ResultsVC.swift */; };
 		42E64D212479899D00242A78 /* DoctorCallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64D202479899D00242A78 /* DoctorCallVC.swift */; };
 		42E64D23247989AA00242A78 /* PatientCallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64D22247989AA00242A78 /* PatientCallVC.swift */; };
+		42E64D2924798D2600242A78 /* HistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64D2824798D2600242A78 /* HistoryTVC.swift */; };
+		42E64D2B24798D3E00242A78 /* SymptomsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64D2A24798D3E00242A78 /* SymptomsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +58,11 @@
 		42E64D142479890C00242A78 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		42E64D162479891E00242A78 /* PatientWelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientWelcomeVC.swift; sourceTree = "<group>"; };
 		42E64D182479892E00242A78 /* DoctorWelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorWelcomeVC.swift; sourceTree = "<group>"; };
-		42E64D1A2479894000242A78 /* HistoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTVC.swift; sourceTree = "<group>"; };
-		42E64D1C2479896800242A78 /* SymptomsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsVC.swift; sourceTree = "<group>"; };
 		42E64D1E2479899000242A78 /* ResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsVC.swift; sourceTree = "<group>"; };
 		42E64D202479899D00242A78 /* DoctorCallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCallVC.swift; sourceTree = "<group>"; };
 		42E64D22247989AA00242A78 /* PatientCallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCallVC.swift; sourceTree = "<group>"; };
+		42E64D2824798D2600242A78 /* HistoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryTVC.swift; path = TeleMedML/HistoryTVC.swift; sourceTree = "<group>"; };
+		42E64D2A24798D3E00242A78 /* SymptomsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 		42E64CD82479855B00242A78 = {
 			isa = PBXGroup;
 			children = (
-				42E64D1C2479896800242A78 /* SymptomsVC.swift */,
+				42E64D2824798D2600242A78 /* HistoryTVC.swift */,
 				42E64CE32479855B00242A78 /* TeleMedML */,
 				42E64CFA2479855E00242A78 /* TeleMedMLTests */,
 				42E64D052479855E00242A78 /* TeleMedMLUITests */,
@@ -117,10 +117,10 @@
 				42E64CE42479855B00242A78 /* AppDelegate.swift */,
 				42E64CE62479855B00242A78 /* SceneDelegate.swift */,
 				42E64CEA2479855B00242A78 /* Main.storyboard */,
+				42E64D2A24798D3E00242A78 /* SymptomsVC.swift */,
 				42E64D1E2479899000242A78 /* ResultsVC.swift */,
 				42E64D202479899D00242A78 /* DoctorCallVC.swift */,
 				42E64D22247989AA00242A78 /* PatientCallVC.swift */,
-				42E64D1A2479894000242A78 /* HistoryTVC.swift */,
 				42E64D162479891E00242A78 /* PatientWelcomeVC.swift */,
 				42E64D182479892E00242A78 /* DoctorWelcomeVC.swift */,
 				42E64D142479890C00242A78 /* LoginVC.swift */,
@@ -282,13 +282,13 @@
 			files = (
 				42E64D192479892E00242A78 /* DoctorWelcomeVC.swift in Sources */,
 				42E64CE52479855B00242A78 /* AppDelegate.swift in Sources */,
+				42E64D2B24798D3E00242A78 /* SymptomsVC.swift in Sources */,
 				42E64D152479890C00242A78 /* LoginVC.swift in Sources */,
-				42E64D1D2479896800242A78 /* SymptomsVC.swift in Sources */,
 				42E64D23247989AA00242A78 /* PatientCallVC.swift in Sources */,
-				42E64D1B2479894000242A78 /* HistoryTVC.swift in Sources */,
 				42E64D1F2479899000242A78 /* ResultsVC.swift in Sources */,
 				42E64CE72479855B00242A78 /* SceneDelegate.swift in Sources */,
 				42E64D212479899D00242A78 /* DoctorCallVC.swift in Sources */,
+				42E64D2924798D2600242A78 /* HistoryTVC.swift in Sources */,
 				42E64D172479891E00242A78 /* PatientWelcomeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

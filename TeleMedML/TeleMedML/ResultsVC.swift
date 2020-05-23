@@ -9,6 +9,8 @@
 import UIKit
 
 class ResultsVC: UIViewController {
+    
+    var showBtn = false
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,14 +9,25 @@
 import UIKit
 
 class PatientWelcomeVC: UIViewController {
+    
+    var name = ""
 
+    @IBOutlet weak var PatientLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        PatientLabel.text = name
+    }
+    
 
+    @IBAction func SendData(_ sender: Any) {
+        self.performSegue(withIdentifier: "sendData", sender: self)
+    }
     /*
     // MARK: - Navigation
 
