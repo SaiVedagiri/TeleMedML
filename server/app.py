@@ -1,5 +1,6 @@
 import os
 from flask import Flask, request
+from flask_cors import CORS
 from block import Block
 from blockchain import Blockchain
 import json
@@ -23,7 +24,11 @@ blockchain.create_genesis_block()
 
 # print(genesisBlock.block_hash)
 
+allRequests = []
+
 app = Flask(__name__)
+CORS(app)
+
 
 @app.route('/')
 def main():
@@ -200,6 +205,7 @@ def createVerifiedTransaction():
 
     tx_data["timestamp"] = time.time()
     print(tx_data)
+    allRequests.append(tx_data)
     blockchain.add_new_transaction(tx_data)
     result = blockchain.mine()
     if not result:
@@ -212,6 +218,10 @@ def createVerifiedTransaction():
             # announce the recently mined block to the network
             announce_new_block(blockchain.last_block)
         return "Block #{} is mined.".format(blockchain.last_block.index)
+
+@app.route('/history', methods=['get'])
+def getHistory():
+    return {'data': allRequests}
 
 # endpoint to query unconfirmed transactions
 @app.route('/pending_tx')
