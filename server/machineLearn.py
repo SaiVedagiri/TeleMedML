@@ -48,7 +48,7 @@ def initialize():
     model.fit(np.array(x_train), np.array(y_train), epochs=50) # Epochs is basically how long it runs
 
 def predict(temp, headache, cough, sneeze, cong):
-    result = model.predict([[104.8/105,0,1,0,0]])[0][0]
+    result = model.predict([[temp/105,headache,cough,sneeze,cong]])[0][0]
     diagnosis = ""
     confidence = 0
 
