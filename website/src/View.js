@@ -9,10 +9,9 @@ class View extends React.Component {
         this.state = {
             fullList: []
         }
-        this.getList();
     }
 
-    async getList() {
+    async componentDidMount(){
         let response = await fetch('https://telemedml.macrotechsolutions.us/history', {
             method: 'GET',
             headers: {
@@ -21,7 +20,14 @@ class View extends React.Component {
         })
             .catch(err => console.log(err))
         let json = await response.json();
-        this.setState({ fullList: json.data });
+        try {
+            this.setState({ fullList: json.data });
+        } catch (e) {
+            console.log(e);
+            this.state = {
+                fullList: json.data
+            }
+        }
     }
 
     render() {
@@ -176,7 +182,7 @@ class View extends React.Component {
                                         <tbody>
                                             {this.state.fullList.map(
                                                 function (data, index) {
-                                                    return(<tr key={index}>
+                                                    return (<tr key={index}>
                                                         <td>{data.Author}</td>
                                                         <td>{data.Temperature}</td>
                                                         <td>{data.Congestion}</td>
