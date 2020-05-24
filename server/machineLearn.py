@@ -61,3 +61,6 @@ def predict(temp, headache, cough, sneeze, cong):
         confidence = ((1-result)*3) * 100
     return diagnosis, confidence
 
+if __name__ == '__main__':
+    initialize()
+    print(predict(98.6, 1, 1, 1, 1))

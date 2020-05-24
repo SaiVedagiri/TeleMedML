@@ -44,11 +44,11 @@ def symptoms():
     congestion = request.headers['congestion']
     author = request.headers['author']
 
-    result, confidence = machineLearn.predict(temp, headache, cough, sneeze, congestion)
+    diagnosis, confidence = machineLearn.predict(temp, headache, cough, sneeze, congestion)
     
     tx_data = request.get_json()
-    tx_data["result"] = result
-    tx_data["confidence"] = confidence
+    tx_data['transactions']["diagnosis"] = diagnosis
+    tx_data['transactions']["confidence"] = confidence
     # Append ML return to tx_data
     # required_fields = ["author", "content"]
 
@@ -73,7 +73,7 @@ def symptoms():
             return str(result + "," + confidence)
         return "Block #{} is mined.".format(blockchain.last_block.index)
     
-    return str(result + "," + confidence)
+    return str(diagnosis + "," + confidence)
 
 @app.route('/alldata', methods=['GET'])
 def alldata():
