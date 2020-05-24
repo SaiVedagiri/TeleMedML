@@ -69,11 +69,11 @@ class HistoryTVC: UITableViewController {
                                 appendArr.append(item["timestamp"].stringValue)
                                 appendArr.append(item["diagnosis"].stringValue)
                                 appendArr.append(item["confidence"].stringValue)
-                                appendArr.append(item["temperature"].stringValue)
-                                appendArr.append(item["cough"].stringValue)
-                                appendArr.append(item["sneeze"].stringValue)
-                                appendArr.append(item["headache"].stringValue)
-                                appendArr.append(item["congestion"].stringValue)
+                                appendArr.append(item["Temperature"].stringValue)
+                                appendArr.append(item["Cough"].stringValue)
+                                appendArr.append(item["Sneeze"].stringValue)
+                                appendArr.append(item["Headache"].stringValue)
+                                appendArr.append(item["Congestion"].stringValue)
                                 self.patientData.append(appendArr)
                             }
                         }

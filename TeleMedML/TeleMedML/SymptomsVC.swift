@@ -78,13 +78,13 @@ class SymptomsVC: UIViewController {
             request.httpMethod = "POST"
             
             request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-            request.setValue(temperatureVal, forHTTPHeaderField: "temperature")
-            request.setValue(headacheval, forHTTPHeaderField: "headache")
-            request.setValue(coughVal, forHTTPHeaderField: "cough")
-            request.setValue(sneezeVal, forHTTPHeaderField: "sneeze")
-            request.setValue(congestionVal, forHTTPHeaderField: "congestion")
-            request.setValue("Arya Tschand", forHTTPHeaderField: "author")
-            request.setValue(symptomsVal, forHTTPHeaderField: "symptoms")
+            request.setValue(temperatureVal, forHTTPHeaderField: "Temperature")
+            request.setValue(headacheval, forHTTPHeaderField: "Headache")
+            request.setValue(coughVal, forHTTPHeaderField: "Cough")
+            request.setValue(sneezeVal, forHTTPHeaderField: "Sneeze")
+            request.setValue(congestionVal, forHTTPHeaderField: "Congestion")
+            request.setValue("Arya Tschand", forHTTPHeaderField: "Author")
+            request.setValue(symptomsVal, forHTTPHeaderField: "Symptoms")
             
             let task = URLSession.shared.dataTask(with: request as URLRequest){ data, response, error in
                 if let returned = String(data: data!, encoding: .utf8) {
