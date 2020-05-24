@@ -8,6 +8,16 @@ import os
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
+model = tf.keras.models.Sequential([
+        tf.keras.layers.Dense(64, activation='relu'),    # relu activation is a piecewise function that is 0 when x < 0 and x when x > 0
+                                                        # activation helps a neuron "decide when to fire". Otherwise our output is a whole lot of numbers
+                                                        # also makes it a lot faster to calculate. just a general good idea. use relu for 99% of the time
+        tf.keras.layers.Dropout(0.2), # Randomly sets input to 0, prevents overfitting (when your model is too tied to your training data)
+        tf.keras.layers.Dense(32, activation='relu'), # Our second layer
+        tf.keras.layers.Dense(16, activation='relu'), # Our second layer
+        tf.keras.layers.Dense(1, activation='sigmoid'), # Our last layer. Notice activation=sigmoid. This gives us the probability of the output from 0 to 1. Our layer is also 1 wide, because we only want to output, if it survived or not
+    ])     
+
 def preprocess(df):
     df = df[['Temperature', 'Headache', 'Cough', 'Sneeze', 'Congestion', 'Disease']] # We're now interested in a lot of things
     
@@ -27,17 +37,7 @@ def preprocess(df):
 def initialize():
     train_df = pd.read_csv("symptomsData.csv")
 
-    x_train, x_test, y_train, y_test = preprocess(train_df)
-
-    model = tf.keras.models.Sequential([
-        tf.keras.layers.Dense(64, activation='relu'),    # relu activation is a piecewise function that is 0 when x < 0 and x when x > 0
-                                                        # activation helps a neuron "decide when to fire". Otherwise our output is a whole lot of numbers
-                                                        # also makes it a lot faster to calculate. just a general good idea. use relu for 99% of the time
-        tf.keras.layers.Dropout(0.2), # Randomly sets input to 0, prevents overfitting (when your model is too tied to your training data)
-        tf.keras.layers.Dense(32, activation='relu'), # Our second layer
-        tf.keras.layers.Dense(16, activation='relu'), # Our second layer
-        tf.keras.layers.Dense(1, activation='sigmoid'), # Our last layer. Notice activation=sigmoid. This gives us the probability of the output from 0 to 1. Our layer is also 1 wide, because we only want to output, if it survived or not
-    ])                                                  # If you want multiple outputs with probabilities, use softmax
+    x_train, x_test, y_train, y_test = preprocess(train_df)                                             # If you want multiple outputs with probabilities, use softmax
 
     model.compile(optimizer='adam', # The algorithm to update our model during training. Just keep this
                 loss='binary_crossentropy', # How the model measures how good it is. This is good for binary classification

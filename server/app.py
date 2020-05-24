@@ -42,7 +42,6 @@ def symptoms():
     cough = request.headers['cough']
     sneeze = request.headers['sneeze']
     congestion = request.headers['congestion']
-    symptoms = request.headers['symptoms']
     author = request.headers['author']
 
     result, confidence = machineLearn.predict(temp, headache, cough, sneeze, congestion)
