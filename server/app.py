@@ -67,6 +67,10 @@ def symptoms():
     print(confidence)
     tx_data['diagnosis'] = diagnosis
     tx_data['confidence'] = confidence
+    if(diagnosis == "COVID-19"):
+        tx_data['covid'] = "yes"
+    else:
+        tx_data['covid'] = "no"
 
     # Append ML return to tx_data
     # required_fields = ["author", "content"]
@@ -89,7 +93,7 @@ def symptoms():
         if chain_length == len(blockchain.chain):
             # announce the recently mined block to the network
             announce_new_block(blockchain.last_block)
-            return str(diagnosis) + "," + str(confidence)
+            return str(diagnosis) + "," + str(confidence) + "," + tx_data['covid']
         return "Block #{} is mined.".format(blockchain.last_block.index)
     
     # return str(diagnosis) + "," + str(confidence)
