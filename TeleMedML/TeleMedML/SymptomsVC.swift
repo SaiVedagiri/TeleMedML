@@ -11,7 +11,7 @@ import UIKit
 class SymptomsVC: UIViewController {
     
     
-    @IBOutlet weak var TempEntry: UITextField!
+    @IBOutlet weak var TempLabel: UILabel!
     @IBOutlet weak var TempSlider: UISlider!
     
     @IBOutlet weak var Headache: UISegmentedControl!
@@ -33,10 +33,11 @@ class SymptomsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func SliderChanged(_ sender: Any) {
-        TempEntry.text = String(String(TempSlider.value).prefix(5))
+        TempLabel.text = "Temperature - " + String(String(TempSlider.value).prefix(5))
     }
     
     @IBAction func Check(_ sender: Any) {
@@ -73,7 +74,7 @@ class SymptomsVC: UIViewController {
             let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
             
             
-            let url = NSURL(string: "https://7c5a521b.ngrok.io/iphone/history")!
+            let url = NSURL(string: "https://telemedml.macrotechsolutions.us/symptoms")!
             let request = NSMutableURLRequest(url: url as URL)
             request.httpMethod = "POST"
             
@@ -89,6 +90,7 @@ class SymptomsVC: UIViewController {
             let task = URLSession.shared.dataTask(with: request as URLRequest){ data, response, error in
                 if let returned = String(data: data!, encoding: .utf8) {
                     print(returned)
+                    self.returnHash = returned
                     CompletionHandler(true,nil)
                     
                     //self.Severity.text = "hello"
@@ -109,20 +111,21 @@ class SymptomsVC: UIViewController {
         if segue.identifier == "results" {
             let ResultsVC = segue.destination as! ResultsVC
             var comps = returnHash.components(separatedBy: ",")
-            if comps[0] == "yes" {
+            if comps[2] == "yes" {
                 ResultsVC.showBtn = true
             } else {
                 ResultsVC.showBtn = false
             }
             var appendArr: [String] = []
             appendArr.append("timestamp")
+            appendArr.append(comps[0])
             appendArr.append(comps[1])
-            appendArr.append(comps[2])
             appendArr.append(temperatureVal)
             appendArr.append(coughVal)
             appendArr.append(sneezeVal)
             appendArr.append(headacheval)
             appendArr.append(congestionVal)
+            ResultsVC.patientData = appendArr
         }
     }
     

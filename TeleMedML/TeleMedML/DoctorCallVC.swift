@@ -20,7 +20,7 @@ class DoctorCallVC: UIViewController {
     }
 
     private func playVideo() {
-        guard let path = Bundle.main.path(forResource: "tmmTest", ofType:"mov") else {
+        guard let path = Bundle.main.path(forResource: "headphone", ofType:"mov") else {
             debugPrint("video.m4v not found")
             return
         }

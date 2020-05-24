@@ -10,6 +10,8 @@
 		07F1FA00A53AE8DBC8A8925F /* Pods_TeleMedML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2E852119D52B706CAE090B /* Pods_TeleMedML.framework */; };
 		429A171D247A01450028F816 /* bigredborder.png in Resources */ = {isa = PBXBuildFile; fileRef = 429A171C247A01450028F816 /* bigredborder.png */; };
 		429A171F247A0BD20028F816 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429A171E247A0BD20028F816 /* SignUpVC.swift */; };
+		429A1722247A6E4E0028F816 /* headphone.mov in Resources */ = {isa = PBXBuildFile; fileRef = 429A1720247A6E4D0028F816 /* headphone.mov */; };
+		429A1723247A6E4E0028F816 /* noheadphone.mov in Resources */ = {isa = PBXBuildFile; fileRef = 429A1721247A6E4D0028F816 /* noheadphone.mov */; };
 		42E64CE52479855B00242A78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64CE42479855B00242A78 /* AppDelegate.swift */; };
 		42E64CE72479855B00242A78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64CE62479855B00242A78 /* SceneDelegate.swift */; };
 		42E64CEC2479855B00242A78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E64CEA2479855B00242A78 /* Main.storyboard */; };
@@ -26,7 +28,6 @@
 		42E64D2924798D2600242A78 /* HistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64D2824798D2600242A78 /* HistoryTVC.swift */; };
 		42E64D2B24798D3E00242A78 /* SymptomsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64D2A24798D3E00242A78 /* SymptomsVC.swift */; };
 		42E64D302479D42600242A78 /* TeleMedML.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E64D2F2479D42500242A78 /* TeleMedML.png */; };
-		42E64D322479D4F300242A78 /* tmmTest.mov in Resources */ = {isa = PBXBuildFile; fileRef = 42E64D312479D4F300242A78 /* tmmTest.mov */; };
 		A208B6C97DFB220A1D35215C /* Pods_TeleMedMLTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64FE4D36FB3C9C099C8E0272 /* Pods_TeleMedMLTests.framework */; };
 		C700F43FBDF3B54D5C1D4E61 /* Pods_TeleMedML_TeleMedMLUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4AD376AB3AADDA00353BE3 /* Pods_TeleMedML_TeleMedMLUITests.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,8 @@
 		3F2E852119D52B706CAE090B /* Pods_TeleMedML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeleMedML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		429A171C247A01450028F816 /* bigredborder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigredborder.png; sourceTree = "<group>"; };
 		429A171E247A0BD20028F816 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		429A1720247A6E4D0028F816 /* headphone.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = headphone.mov; sourceTree = "<group>"; };
+		429A1721247A6E4D0028F816 /* noheadphone.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = noheadphone.mov; sourceTree = "<group>"; };
 		42E64CE12479855B00242A78 /* TeleMedML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeleMedML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E64CE42479855B00242A78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42E64CE62479855B00242A78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +78,6 @@
 		42E64D2824798D2600242A78 /* HistoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryTVC.swift; path = TeleMedML/HistoryTVC.swift; sourceTree = "<group>"; };
 		42E64D2A24798D3E00242A78 /* SymptomsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsVC.swift; sourceTree = "<group>"; };
 		42E64D2F2479D42500242A78 /* TeleMedML.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TeleMedML.png; path = ../../../../../Downloads/TeleMedML.png; sourceTree = "<group>"; };
-		42E64D312479D4F300242A78 /* tmmTest.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = tmmTest.mov; path = ../../../../../Desktop/tmmTest.mov; sourceTree = "<group>"; };
 		64FE4D36FB3C9C099C8E0272 /* Pods_TeleMedMLTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeleMedMLTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FB3F1598E31780EB81A5E8 /* Pods-TeleMedML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleMedML.release.xcconfig"; path = "Target Support Files/Pods-TeleMedML/Pods-TeleMedML.release.xcconfig"; sourceTree = "<group>"; };
 		671690EC4FF036F679224C3C /* Pods-TeleMedML-TeleMedMLUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleMedML-TeleMedMLUITests.debug.xcconfig"; path = "Target Support Files/Pods-TeleMedML-TeleMedMLUITests/Pods-TeleMedML-TeleMedMLUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,7 +151,8 @@
 		42E64CE32479855B00242A78 /* TeleMedML */ = {
 			isa = PBXGroup;
 			children = (
-				42E64D312479D4F300242A78 /* tmmTest.mov */,
+				429A1720247A6E4D0028F816 /* headphone.mov */,
+				429A1721247A6E4D0028F816 /* noheadphone.mov */,
 				429A171C247A01450028F816 /* bigredborder.png */,
 				42E64D2F2479D42500242A78 /* TeleMedML.png */,
 				42E64CE42479855B00242A78 /* AppDelegate.swift */,
@@ -310,10 +313,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42E64D322479D4F300242A78 /* tmmTest.mov in Resources */,
+				429A1723247A6E4E0028F816 /* noheadphone.mov in Resources */,
 				42E64CF12479855E00242A78 /* LaunchScreen.storyboard in Resources */,
 				42E64D302479D42600242A78 /* TeleMedML.png in Resources */,
 				42E64CEE2479855E00242A78 /* Assets.xcassets in Resources */,
+				429A1722247A6E4E0028F816 /* headphone.mov in Resources */,
 				429A171D247A01450028F816 /* bigredborder.png in Resources */,
 				42E64CEC2479855B00242A78 /* Main.storyboard in Resources */,
 			);
