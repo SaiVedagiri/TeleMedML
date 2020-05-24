@@ -10,6 +10,15 @@ import time
 import numpy as np # linear algebra
 import pandas as pd
 
+import boto3
+import json
+
+comprehend = boto3.client(service_name='comprehend', region_name='us-east-1')
+
+response = comprehend.detect_sentiment(Text="Happy, sad, terrible, great", LanguageCode='en')
+response['SentimentScore']['Negative']
+# print(response.get('Sentiment Score').get('Negative'))
+
 import machineLearn
 
 # import firebase_admin
@@ -37,16 +46,23 @@ def main():
 
 @app.route('/symptoms', methods=['POST'])
 def symptoms():
-    tx_data = request.get_json()
+    tx_data = request.headers
 
-    temp = tx_data.get('temperature')
-    headache = tx_data.get('headache')
-    cough = tx_data.get('cough')
-    sneeze = tx_data.get('sneeze')
-    congestion = tx_data.get('congestion')
-    author = tx_data.get('author')
+    temp = tx_data['temperature']
+    headache = tx_data['headache']
+    cough = tx_data['cough']
+    sneeze = tx_data['sneeze']
+    congestion = tx_data['congestion']
+    author = tx_data['author']
+    symptoms = tx_data['symptoms']
 
     diagnosis, confidence = machineLearn.predict(temp, headache, cough, sneeze, congestion)
+    
+    if (symptoms != ''):
+        #api request
+        response = comprehend.detect_sentiment(Text=symptoms, LanguageCode='en')
+        res_neg = response['SentimentScore']['Negative']
+        confidence = res_neg * confidence
     
     tx_data['diagnosis'] = diagnosis
     tx_data['confidence'] = confidence
