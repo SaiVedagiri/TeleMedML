@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LoginVC: UIViewController {
     
@@ -17,10 +18,24 @@ class LoginVC: UIViewController {
     var name = ""
     
     @IBAction func EnterClick(_ sender: Any) {
+        /*
         if Username.text == "doctor" {
             self.performSegue(withIdentifier: "doctorlogin", sender: self)
         } else {
             self.performSegue(withIdentifier: "patientlogin", sender: self)
+        }
+ */
+        PFUser.logInWithUsername(inBackground: Username.text!, password: Password.text!) {(user, error) in
+          if user != nil {
+            if user!["status"] as? String == Optional("Patient") {
+                self.performSegue(withIdentifier: "patientlogin", sender: self)
+            } else {
+                self.performSegue(withIdentifier: "doctorlogin", sender: self)
+            }
+          }
+          else {
+            //no user doesnt exist
+          }
         }
     }
     
@@ -35,10 +50,11 @@ class LoginVC: UIViewController {
         if segue.identifier == "doctorlogin" {
             let DoctorWelcomeVC = segue.destination as! DoctorWelcomeVC
             DoctorWelcomeVC.name = name
-        } else {
+        } else if segue.identifier == "patientlogin" {
             let PatientWelcomeVC = segue.destination as! PatientWelcomeVC
             PatientWelcomeVC.name = name
         }
     }
 
 }
+

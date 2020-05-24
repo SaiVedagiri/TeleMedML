@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		07F1FA00A53AE8DBC8A8925F /* Pods_TeleMedML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2E852119D52B706CAE090B /* Pods_TeleMedML.framework */; };
 		429A171D247A01450028F816 /* bigredborder.png in Resources */ = {isa = PBXBuildFile; fileRef = 429A171C247A01450028F816 /* bigredborder.png */; };
+		429A171F247A0BD20028F816 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429A171E247A0BD20028F816 /* SignUpVC.swift */; };
 		42E64CE52479855B00242A78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64CE42479855B00242A78 /* AppDelegate.swift */; };
 		42E64CE72479855B00242A78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64CE62479855B00242A78 /* SceneDelegate.swift */; };
 		42E64CEC2479855B00242A78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E64CEA2479855B00242A78 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		1C8078E278089056D0B78BA3 /* Pods-TeleMedMLTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleMedMLTests.debug.xcconfig"; path = "Target Support Files/Pods-TeleMedMLTests/Pods-TeleMedMLTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F2E852119D52B706CAE090B /* Pods_TeleMedML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeleMedML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		429A171C247A01450028F816 /* bigredborder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigredborder.png; sourceTree = "<group>"; };
+		429A171E247A0BD20028F816 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		42E64CE12479855B00242A78 /* TeleMedML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeleMedML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E64CE42479855B00242A78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42E64CE62479855B00242A78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				42E64CE42479855B00242A78 /* AppDelegate.swift */,
 				42E64CE62479855B00242A78 /* SceneDelegate.swift */,
 				42E64CEA2479855B00242A78 /* Main.storyboard */,
+				429A171E247A0BD20028F816 /* SignUpVC.swift */,
 				42E64D2A24798D3E00242A78 /* SymptomsVC.swift */,
 				42E64D1E2479899000242A78 /* ResultsVC.swift */,
 				42E64D202479899D00242A78 /* DoctorCallVC.swift */,
@@ -195,7 +198,6 @@
 				1C8078E278089056D0B78BA3 /* Pods-TeleMedMLTests.debug.xcconfig */,
 				BCD944185C145A62A3DBCCCC /* Pods-TeleMedMLTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -444,6 +446,7 @@
 				42E64D192479892E00242A78 /* DoctorWelcomeVC.swift in Sources */,
 				42E64CE52479855B00242A78 /* AppDelegate.swift in Sources */,
 				42E64D2B24798D3E00242A78 /* SymptomsVC.swift in Sources */,
+				429A171F247A0BD20028F816 /* SignUpVC.swift in Sources */,
 				42E64D152479890C00242A78 /* LoginVC.swift in Sources */,
 				42E64D23247989AA00242A78 /* PatientCallVC.swift in Sources */,
 				42E64D1F2479899000242A78 /* ResultsVC.swift in Sources */,

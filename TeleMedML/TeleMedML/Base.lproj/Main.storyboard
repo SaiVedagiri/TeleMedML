@@ -39,7 +39,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YBf-zR-o1i"/>
+                    <navigationItem key="navigationItem" id="YBf-zR-o1i">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Up" id="oyk-O4-ctf">
+                            <connections>
+                                <segue destination="D3O-tl-wgJ" kind="show" identifier="signup" id="8I6-MB-hGj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="Password" destination="zAh-dP-1sX" id="XAr-MN-YEb"/>
                         <outlet property="Username" destination="qNU-kp-l9c" id="N0m-o2-dfF"/>
@@ -96,6 +102,73 @@
             </objects>
             <point key="canvasLocation" x="2788" y="836"/>
         </scene>
+        <!--Sign UpVC-->
+        <scene sceneID="DxS-K5-Yog">
+            <objects>
+                <viewController id="D3O-tl-wgJ" customClass="SignUpVC" customModule="TeleMedML" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QsJ-rq-3mn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lHj-SK-yUa">
+                                <rect key="frame" x="113" y="138" width="188" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mDE-aR-fgo">
+                                <rect key="frame" x="113" y="216" width="188" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eUi-xx-Xfz">
+                                <rect key="frame" x="113" y="292" width="188" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kjl-ZF-mpF">
+                                <rect key="frame" x="113" y="360" width="188" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6I4-na-zAj">
+                                <rect key="frame" x="100" y="472" width="214" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Doctor"/>
+                                    <segment title="Patient"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feT-E4-Re4">
+                                <rect key="frame" x="183" y="597" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="Submit:" destination="D3O-tl-wgJ" eventType="touchUpInside" id="tNb-1a-Gcp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="xJ6-9j-uk3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kKq-JA-z21"/>
+                    <connections>
+                        <outlet property="DoctorPatient" destination="6I4-na-zAj" id="BSC-Q9-HPp"/>
+                        <outlet property="Name" destination="lHj-SK-yUa" id="rP7-yD-axb"/>
+                        <outlet property="email" destination="mDE-aR-fgo" id="mFw-V0-0Oy"/>
+                        <outlet property="password" destination="eUi-xx-Xfz" id="F8v-A8-EAI"/>
+                        <outlet property="phonenumber" destination="kjl-ZF-mpF" id="lEn-67-jJt"/>
+                        <segue destination="Rct-Dw-hKu" kind="show" identifier="signupPatient" id="Vad-Ja-M2W"/>
+                        <segue destination="XoI-IC-MAN" kind="show" identifier="signupDoctor" id="4cH-fV-nBo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVN-ej-xZa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="761" y="-554"/>
+        </scene>
         <!--Patient WelcomeVC-->
         <scene sceneID="enJ-p9-M11">
             <objects>
@@ -105,7 +178,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLb-9f-k6g">
-                                <rect key="frame" x="0.0" y="257" width="414" height="21"/>
+                                <rect key="frame" x="0.0" y="257" width="414" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -419,6 +492,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="FfO-De-AUW"/>
+        <segue reference="DCd-CZ-ocR"/>
+        <segue reference="QZ9-ZH-eSg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="TeleMedML.png" width="716" height="688"/>
