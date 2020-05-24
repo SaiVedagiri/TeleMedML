@@ -44,6 +44,58 @@ machineLearn.initialize()
 def main():
     return 'Welcome to TeleMedML.'
 
+@app.route('/test', methods=['POST'])
+def test():
+    tx_data = {k:v for k, v in request.headers.items()}
+    temp = float(tx_data['Temperature'])
+    headache = int(tx_data['Headache'])
+    cough = int(tx_data['Cough'])
+    sneeze = int(tx_data['Sneeze'])
+    congestion = int(tx_data['Congestion'])
+    author = tx_data['Author']
+    symptoms = tx_data['Symptoms']
+    diagnosis = tx_data['Diagnosis']
+    confidence = tx_data['Confidence']
+    
+    tx_data['diagnosis'] = diagnosis
+    tx_data['confidence'] = confidence
+    tx_data.pop('Diagnosis')
+    tx_data.pop('Confidence')    
+    if (symptoms != ''):
+        #api request
+        response = comprehend.detect_sentiment(Text=symptoms, LanguageCode='en')
+        res_neg = response['SentimentScore']['Negative']
+        confidence = res_neg * confidence
+    
+    if(diagnosis == "COVID-19"):
+        tx_data['covid'] = "yes"
+    else:
+        tx_data['covid'] = "no"
+
+    # Append ML return to tx_data
+    # required_fields = ["author", "content"]
+
+    # for field in required_fields:
+    #     if not tx_data.get(field):
+    #         return "Invalid transaction data", 404
+
+    tx_data["timestamp"] = time.time()
+    print(tx_data)
+    allRequests.append(tx_data)
+    blockchain.add_new_transaction(tx_data)
+    result = blockchain.mine()
+    if not result:
+        return "No transactions to mine"
+    else:
+        # Making sure we have the longest chain before announcing to the network
+        chain_length = len(blockchain.chain)
+        consensus()
+        if chain_length == len(blockchain.chain):
+            # announce the recently mined block to the network
+            announce_new_block(blockchain.last_block)
+            return str(diagnosis) + "," + str(confidence) + "," + tx_data['covid']
+        return "Block #{} is mined.".format(blockchain.last_block.index)
+
 @app.route('/symptoms', methods=['POST'])
 def symptoms():
     tx_data = {k:v for k, v in request.headers.items()}
