@@ -158,17 +158,56 @@
                     <view key="view" contentMode="scaleToFill" id="9al-RK-JVj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4D0-p0-kP0">
+                                <rect key="frame" x="102" y="225" width="203" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCi-ax-1Sv">
+                                <rect key="frame" x="95" y="295" width="217" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Text View" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B03-H4-RVz">
+                                <rect key="frame" x="83" y="452" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdl-h7-xHW">
+                                <rect key="frame" x="184" y="667" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="JoinCall:" destination="KrU-W1-PmL" eventType="touchUpInside" id="NNy-Nr-tGC"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bigredborder.png" translatesAutoresizingMaskIntoConstraints="NO" id="3D7-Dr-OP0">
+                                <rect key="frame" x="64" y="158" width="286" height="237"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ijB-g9-GXl"/>
                     </view>
                     <navigationItem key="navigationItem" id="YBB-j2-3hT"/>
                     <connections>
-                        <segue destination="Dez-Nc-wgh" kind="show" id="Cpm-nD-QuV"/>
+                        <outlet property="CallBtn" destination="Vdl-h7-xHW" id="hp6-nL-e9d"/>
+                        <outlet property="Confidence" destination="wCi-ax-1Sv" id="PN3-AB-cxO"/>
+                        <outlet property="virus" destination="4D0-p0-kP0" id="Rw9-ea-Coh"/>
+                        <segue destination="Dez-Nc-wgh" kind="show" identifier="startCall" id="Cpm-nD-QuV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoY-yW-Dw2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4225" y="-275"/>
+            <point key="canvasLocation" x="4224.6376811594209" y="-275.22321428571428"/>
         </scene>
         <!--Patient CallVC-->
         <scene sceneID="RUo-Ee-TgC">
@@ -383,5 +422,6 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="TeleMedML.png" width="716" height="688"/>
+        <image name="bigredborder.png" width="960" height="720"/>
     </resources>
 </document>

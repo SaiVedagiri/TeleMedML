@@ -13,13 +13,30 @@ class ResultsVC: UIViewController {
     var showBtn = false
     var hashVal = ""
 
+    @IBOutlet weak var virus: UILabel!
+    @IBOutlet weak var Confidence: UILabel!
+    @IBOutlet weak var CallBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        var comps = hashVal.components(separatedBy: ",")
+        if comps[0] == "yes" {
+            CallBtn.isHidden = false
+            CallBtn.isEnabled = true
+        } else {
+            CallBtn.isHidden = true
+            CallBtn.isEnabled = false
+        }
+        
+        virus.text = comps[1]
+        Confidence.text = comps[2] + "%"
+        
     }
     
-
+    @IBAction func JoinCall(_ sender: Any) {
+        self.performSegue(withIdentifier: "startCall", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 

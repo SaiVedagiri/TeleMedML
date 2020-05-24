@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07F1FA00A53AE8DBC8A8925F /* Pods_TeleMedML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2E852119D52B706CAE090B /* Pods_TeleMedML.framework */; };
+		429A171D247A01450028F816 /* bigredborder.png in Resources */ = {isa = PBXBuildFile; fileRef = 429A171C247A01450028F816 /* bigredborder.png */; };
 		42E64CE52479855B00242A78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64CE42479855B00242A78 /* AppDelegate.swift */; };
 		42E64CE72479855B00242A78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64CE62479855B00242A78 /* SceneDelegate.swift */; };
 		42E64CEC2479855B00242A78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E64CEA2479855B00242A78 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 		42E64D2B24798D3E00242A78 /* SymptomsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E64D2A24798D3E00242A78 /* SymptomsVC.swift */; };
 		42E64D302479D42600242A78 /* TeleMedML.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E64D2F2479D42500242A78 /* TeleMedML.png */; };
 		42E64D322479D4F300242A78 /* tmmTest.mov in Resources */ = {isa = PBXBuildFile; fileRef = 42E64D312479D4F300242A78 /* tmmTest.mov */; };
+		A208B6C97DFB220A1D35215C /* Pods_TeleMedMLTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64FE4D36FB3C9C099C8E0272 /* Pods_TeleMedMLTests.framework */; };
+		C700F43FBDF3B54D5C1D4E61 /* Pods_TeleMedML_TeleMedMLUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4AD376AB3AADDA00353BE3 /* Pods_TeleMedML_TeleMedMLUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C8078E278089056D0B78BA3 /* Pods-TeleMedMLTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleMedMLTests.debug.xcconfig"; path = "Target Support Files/Pods-TeleMedMLTests/Pods-TeleMedMLTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3F2E852119D52B706CAE090B /* Pods_TeleMedML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeleMedML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		429A171C247A01450028F816 /* bigredborder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigredborder.png; sourceTree = "<group>"; };
 		42E64CE12479855B00242A78 /* TeleMedML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeleMedML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E64CE42479855B00242A78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42E64CE62479855B00242A78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +74,13 @@
 		42E64D2A24798D3E00242A78 /* SymptomsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsVC.swift; sourceTree = "<group>"; };
 		42E64D2F2479D42500242A78 /* TeleMedML.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TeleMedML.png; path = ../../../../../Downloads/TeleMedML.png; sourceTree = "<group>"; };
 		42E64D312479D4F300242A78 /* tmmTest.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = tmmTest.mov; path = ../../../../../Desktop/tmmTest.mov; sourceTree = "<group>"; };
+		64FE4D36FB3C9C099C8E0272 /* Pods_TeleMedMLTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeleMedMLTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65FB3F1598E31780EB81A5E8 /* Pods-TeleMedML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleMedML.release.xcconfig"; path = "Target Support Files/Pods-TeleMedML/Pods-TeleMedML.release.xcconfig"; sourceTree = "<group>"; };
+		671690EC4FF036F679224C3C /* Pods-TeleMedML-TeleMedMLUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleMedML-TeleMedMLUITests.debug.xcconfig"; path = "Target Support Files/Pods-TeleMedML-TeleMedMLUITests/Pods-TeleMedML-TeleMedMLUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		727546634BB900AA0511BCE3 /* Pods-TeleMedML.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleMedML.debug.xcconfig"; path = "Target Support Files/Pods-TeleMedML/Pods-TeleMedML.debug.xcconfig"; sourceTree = "<group>"; };
+		BCD944185C145A62A3DBCCCC /* Pods-TeleMedMLTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleMedMLTests.release.xcconfig"; path = "Target Support Files/Pods-TeleMedMLTests/Pods-TeleMedMLTests.release.xcconfig"; sourceTree = "<group>"; };
+		F1F2790CAA4F1E06AFF8F576 /* Pods-TeleMedML-TeleMedMLUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleMedML-TeleMedMLUITests.release.xcconfig"; path = "Target Support Files/Pods-TeleMedML-TeleMedMLUITests/Pods-TeleMedML-TeleMedMLUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FD4AD376AB3AADDA00353BE3 /* Pods_TeleMedML_TeleMedMLUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeleMedML_TeleMedMLUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07F1FA00A53AE8DBC8A8925F /* Pods_TeleMedML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A208B6C97DFB220A1D35215C /* Pods_TeleMedMLTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +104,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C700F43FBDF3B54D5C1D4E61 /* Pods_TeleMedML_TeleMedMLUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A602238C23E9E3B99F36A66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F2E852119D52B706CAE090B /* Pods_TeleMedML.framework */,
+				FD4AD376AB3AADDA00353BE3 /* Pods_TeleMedML_TeleMedMLUITests.framework */,
+				64FE4D36FB3C9C099C8E0272 /* Pods_TeleMedMLTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		42E64CD82479855B00242A78 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +129,8 @@
 				42E64CFA2479855E00242A78 /* TeleMedMLTests */,
 				42E64D052479855E00242A78 /* TeleMedMLUITests */,
 				42E64CE22479855B00242A78 /* Products */,
+				DAA6F8585874489DDF04CDCF /* Pods */,
+				0A602238C23E9E3B99F36A66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				42E64D312479D4F300242A78 /* tmmTest.mov */,
+				429A171C247A01450028F816 /* bigredborder.png */,
 				42E64D2F2479D42500242A78 /* TeleMedML.png */,
 				42E64CE42479855B00242A78 /* AppDelegate.swift */,
 				42E64CE62479855B00242A78 /* SceneDelegate.swift */,
@@ -155,6 +185,20 @@
 			path = TeleMedMLUITests;
 			sourceTree = "<group>";
 		};
+		DAA6F8585874489DDF04CDCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				727546634BB900AA0511BCE3 /* Pods-TeleMedML.debug.xcconfig */,
+				65FB3F1598E31780EB81A5E8 /* Pods-TeleMedML.release.xcconfig */,
+				671690EC4FF036F679224C3C /* Pods-TeleMedML-TeleMedMLUITests.debug.xcconfig */,
+				F1F2790CAA4F1E06AFF8F576 /* Pods-TeleMedML-TeleMedMLUITests.release.xcconfig */,
+				1C8078E278089056D0B78BA3 /* Pods-TeleMedMLTests.debug.xcconfig */,
+				BCD944185C145A62A3DBCCCC /* Pods-TeleMedMLTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42E64D0B2479855E00242A78 /* Build configuration list for PBXNativeTarget "TeleMedML" */;
 			buildPhases = (
+				C259EC1B94D68302A14BD37B /* [CP] Check Pods Manifest.lock */,
 				42E64CDD2479855B00242A78 /* Sources */,
 				42E64CDE2479855B00242A78 /* Frameworks */,
 				42E64CDF2479855B00242A78 /* Resources */,
+				95D990EFC4C94015AE76BA37 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,6 +225,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42E64D0E2479855E00242A78 /* Build configuration list for PBXNativeTarget "TeleMedMLTests" */;
 			buildPhases = (
+				7BB3B18385F9FEFBF1F46798 /* [CP] Check Pods Manifest.lock */,
 				42E64CF32479855E00242A78 /* Sources */,
 				42E64CF42479855E00242A78 /* Frameworks */,
 				42E64CF52479855E00242A78 /* Resources */,
@@ -197,9 +244,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42E64D112479855E00242A78 /* Build configuration list for PBXNativeTarget "TeleMedMLUITests" */;
 			buildPhases = (
+				F65F03412C6C93E203FC83D5 /* [CP] Check Pods Manifest.lock */,
 				42E64CFE2479855E00242A78 /* Sources */,
 				42E64CFF2479855E00242A78 /* Frameworks */,
 				42E64D002479855E00242A78 /* Resources */,
+				2540B077336AAD420F012E00 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,6 +312,7 @@
 				42E64CF12479855E00242A78 /* LaunchScreen.storyboard in Resources */,
 				42E64D302479D42600242A78 /* TeleMedML.png in Resources */,
 				42E64CEE2479855E00242A78 /* Assets.xcassets in Resources */,
+				429A171D247A01450028F816 /* bigredborder.png in Resources */,
 				42E64CEC2479855B00242A78 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +332,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2540B077336AAD420F012E00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeleMedML-TeleMedMLUITests/Pods-TeleMedML-TeleMedMLUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeleMedML-TeleMedMLUITests/Pods-TeleMedML-TeleMedMLUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeleMedML-TeleMedMLUITests/Pods-TeleMedML-TeleMedMLUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BB3B18385F9FEFBF1F46798 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TeleMedMLTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95D990EFC4C94015AE76BA37 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeleMedML/Pods-TeleMedML-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeleMedML/Pods-TeleMedML-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeleMedML/Pods-TeleMedML-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C259EC1B94D68302A14BD37B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TeleMedML-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F65F03412C6C93E203FC83D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TeleMedML-TeleMedMLUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		42E64CDD2479855B00242A78 /* Sources */ = {
@@ -468,6 +621,7 @@
 		};
 		42E64D0C2479855E00242A78 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 727546634BB900AA0511BCE3 /* Pods-TeleMedML.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -486,6 +640,7 @@
 		};
 		42E64D0D2479855E00242A78 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65FB3F1598E31780EB81A5E8 /* Pods-TeleMedML.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +659,7 @@
 		};
 		42E64D0F2479855E00242A78 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C8078E278089056D0B78BA3 /* Pods-TeleMedMLTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -526,6 +682,7 @@
 		};
 		42E64D102479855E00242A78 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCD944185C145A62A3DBCCCC /* Pods-TeleMedMLTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -548,6 +705,7 @@
 		};
 		42E64D122479855E00242A78 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 671690EC4FF036F679224C3C /* Pods-TeleMedML-TeleMedMLUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -568,6 +726,7 @@
 		};
 		42E64D132479855E00242A78 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1F2790CAA4F1E06AFF8F576 /* Pods-TeleMedML-TeleMedMLUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

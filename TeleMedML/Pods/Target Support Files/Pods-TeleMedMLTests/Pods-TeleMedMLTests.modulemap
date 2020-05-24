@@ -1,0 +1,6 @@
+framework module Pods_TeleMedMLTests {
+  umbrella header "Pods-TeleMedMLTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
