@@ -46,15 +46,14 @@ def main():
 
 @app.route('/symptoms', methods=['POST'])
 def symptoms():
-    tx_data = request.headers
-
-    temp = tx_data['temperature']
-    headache = tx_data['headache']
-    cough = tx_data['cough']
-    sneeze = tx_data['sneeze']
-    congestion = tx_data['congestion']
-    author = tx_data['author']
-    symptoms = tx_data['symptoms']
+    tx_data = {k:v for k, v in request.headers.items()}
+    temp = float(tx_data['Temperature'])
+    headache = int(tx_data['Headache'])
+    cough = int(tx_data['Cough'])
+    sneeze = int(tx_data['Sneeze'])
+    congestion = int(tx_data['Congestion'])
+    author = tx_data['Author']
+    symptoms = tx_data['Symptoms']
 
     diagnosis, confidence = machineLearn.predict(temp, headache, cough, sneeze, congestion)
     
@@ -64,6 +63,8 @@ def symptoms():
         res_neg = response['SentimentScore']['Negative']
         confidence = res_neg * confidence
     
+    print(diagnosis)
+    print(confidence)
     tx_data['diagnosis'] = diagnosis
     tx_data['confidence'] = confidence
 
