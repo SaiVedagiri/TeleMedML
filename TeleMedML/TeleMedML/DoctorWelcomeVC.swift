@@ -12,9 +12,11 @@ class DoctorWelcomeVC: UIViewController {
     
     var name = ""
 
+    @IBOutlet weak var nameLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nameLbl.text = name
         // Do any additional setup after loading the view.
     }
     
