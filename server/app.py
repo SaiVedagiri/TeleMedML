@@ -10,7 +10,7 @@ import time
 import numpy as np # linear algebra
 import pandas as pd
 
-import dataanalyze
+import machineLearn
 
 # import firebase_admin
 # from firebase_admin import credentials
@@ -29,6 +29,7 @@ allRequests = []
 app = Flask(__name__)
 CORS(app)
 
+machineLearn.initialize()
 
 @app.route('/')
 def main():
@@ -42,9 +43,38 @@ def symptoms():
     sneeze = request.headers['sneeze']
     congestion = request.headers['congestion']
     symptoms = request.headers['symptoms']
-    symptomsarr = symptoms.split(',')
-    print(symptomsarr)
-    return "yes,disease,percentage"
+    author = request.headers['author']
+
+    result, confidence = machineLearn.predict(temp, headache, cough, sneeze, congestion)
+    
+    tx_data = request.get_json()
+    tx_data["result"] = result
+    tx_data["confidence"] = confidence
+    # Append ML return to tx_data
+    # required_fields = ["author", "content"]
+
+    # for field in required_fields:
+    #     if not tx_data.get(field):
+    #         return "Invalid transaction data", 404
+
+    tx_data["timestamp"] = time.time()
+    print(tx_data)
+    allRequests.append(tx_data)
+    blockchain.add_new_transaction(tx_data)
+    result = blockchain.mine()
+    if not result:
+        return "No transactions to mine"
+    else:
+        # Making sure we have the longest chain before announcing to the network
+        chain_length = len(blockchain.chain)
+        consensus()
+        if chain_length == len(blockchain.chain):
+            # announce the recently mined block to the network
+            announce_new_block(blockchain.last_block)
+            return str(result + "," + confidence)
+        return "Block #{} is mined.".format(blockchain.last_block.index)
+    
+    return str(result + "," + confidence)
 
 @app.route('/alldata', methods=['GET'])
 def alldata():
@@ -192,34 +222,8 @@ def verify_and_add_block():
 
     return "Block added to the chain", 201
 
-@app.route('/createVerifiedTransaction', methods=['POST'])
-def createVerifiedTransaction():
-    # Call ML function
-    tx_data = request.get_json()
-    # Append ML return to tx_data
-    required_fields = ["author", "content"]
 
-    for field in required_fields:
-        if not tx_data.get(field):
-            return "Invalid transaction data", 404
-
-    tx_data["timestamp"] = time.time()
-    print(tx_data)
-    allRequests.append(tx_data)
-    blockchain.add_new_transaction(tx_data)
-    result = blockchain.mine()
-    if not result:
-        return "No transactions to mine"
-    else:
-        # Making sure we have the longest chain before announcing to the network
-        chain_length = len(blockchain.chain)
-        consensus()
-        if chain_length == len(blockchain.chain):
-            # announce the recently mined block to the network
-            announce_new_block(blockchain.last_block)
-        return "Block #{} is mined.".format(blockchain.last_block.index)
-
-@app.route('/history', methods=['get'])
+@app.route('/history', methods=['GET'])
 def getHistory():
     return {'data': allRequests}
 
@@ -269,5 +273,5 @@ def announce_new_block(block):
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
-    port = int(os.environ.get('PORT', 5000))
+    port = int(os.environ.get('PORT', 80))
     app.run(host='0.0.0.0', port=port)
