@@ -37,18 +37,20 @@ def main():
 
 @app.route('/symptoms', methods=['POST'])
 def symptoms():
-    temp = request.headers['temperature']
-    headache = request.headers['headache']
-    cough = request.headers['cough']
-    sneeze = request.headers['sneeze']
-    congestion = request.headers['congestion']
-    author = request.headers['author']
+    tx_data = request.get_json()
+
+    temp = tx_data.get('temperature')
+    headache = tx_data.get('headache')
+    cough = tx_data.get('cough')
+    sneeze = tx_data.get('sneeze')
+    congestion = tx_data.get('congestion')
+    author = tx_data.get('author')
 
     diagnosis, confidence = machineLearn.predict(temp, headache, cough, sneeze, congestion)
     
-    tx_data = request.get_json()
-    tx_data['transactions']["diagnosis"] = diagnosis
-    tx_data['transactions']["confidence"] = confidence
+    tx_data['diagnosis'] = diagnosis
+    tx_data['confidence'] = confidence
+
     # Append ML return to tx_data
     # required_fields = ["author", "content"]
 
@@ -70,10 +72,10 @@ def symptoms():
         if chain_length == len(blockchain.chain):
             # announce the recently mined block to the network
             announce_new_block(blockchain.last_block)
-            return str(result + "," + confidence)
+            return str(diagnosis) + "," + str(confidence)
         return "Block #{} is mined.".format(blockchain.last_block.index)
     
-    return str(diagnosis + "," + confidence)
+    # return str(diagnosis) + "," + str(confidence)
 
 @app.route('/alldata', methods=['GET'])
 def alldata():

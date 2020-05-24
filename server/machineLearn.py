@@ -16,7 +16,9 @@ model = tf.keras.models.Sequential([
         tf.keras.layers.Dense(32, activation='relu'), # Our second layer
         tf.keras.layers.Dense(16, activation='relu'), # Our second layer
         tf.keras.layers.Dense(1, activation='sigmoid'), # Our last layer. Notice activation=sigmoid. This gives us the probability of the output from 0 to 1. Our layer is also 1 wide, because we only want to output, if it survived or not
-    ])     
+    ])
+
+# model._make_predict_function()
 
 def preprocess(df):
     df = df[['Temperature', 'Headache', 'Cough', 'Sneeze', 'Congestion', 'Disease']] # We're now interested in a lot of things
