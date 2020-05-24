@@ -36,15 +36,15 @@ class SymptomsVC: UIViewController {
     }
     
     @IBAction func SliderChanged(_ sender: Any) {
-        TempEntry.text = String(TempSlider.value)
+        TempEntry.text = String(String(TempSlider.value).prefix(5))
     }
     
     @IBAction func Check(_ sender: Any) {
         temperatureVal = String(TempSlider.value)
-        headacheval = String(Headache.selectedSegmentIndex)
-        coughVal = String(Cough.selectedSegmentIndex)
-        sneezeVal = String(Sneezing.selectedSegmentIndex)
-        congestionVal = String(Congestion.selectedSegmentIndex)
+        headacheval = String(Headache.selectedSegmentIndex/2)
+        coughVal = String(Cough.selectedSegmentIndex/2)
+        sneezeVal = String(Sneezing.selectedSegmentIndex/2)
+        congestionVal = String(Congestion.selectedSegmentIndex/2)
         symptomsVal = Symptoms.text
         getLeader(value2: "test")
     }
@@ -78,7 +78,13 @@ class SymptomsVC: UIViewController {
             request.httpMethod = "POST"
             
             request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-            request.setValue(temperatureVal, forHTTPHeaderField: "Temperature")
+            request.setValue(temperatureVal, forHTTPHeaderField: "temperature")
+            request.setValue(headacheval, forHTTPHeaderField: "headache")
+            request.setValue(coughVal, forHTTPHeaderField: "cough")
+            request.setValue(sneezeVal, forHTTPHeaderField: "sneeze")
+            request.setValue(congestionVal, forHTTPHeaderField: "congestion")
+            request.setValue("Arya Tschand", forHTTPHeaderField: "author")
+            request.setValue(symptomsVal, forHTTPHeaderField: "symptoms")
             
             let task = URLSession.shared.dataTask(with: request as URLRequest){ data, response, error in
                 if let returned = String(data: data!, encoding: .utf8) {
@@ -102,8 +108,21 @@ class SymptomsVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "results" {
             let ResultsVC = segue.destination as! ResultsVC
-            ResultsVC.hashVal = returnHash
-            ResultsVC.showBtn = true
+            var comps = returnHash.components(separatedBy: ",")
+            if comps[0] == "yes" {
+                ResultsVC.showBtn = true
+            } else {
+                ResultsVC.showBtn = false
+            }
+            var appendArr: [String] = []
+            appendArr.append("timestamp")
+            appendArr.append(comps[1])
+            appendArr.append(comps[2])
+            appendArr.append(temperatureVal)
+            appendArr.append(coughVal)
+            appendArr.append(sneezeVal)
+            appendArr.append(headacheval)
+            appendArr.append(congestionVal)
         }
     }
     

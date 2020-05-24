@@ -274,6 +274,7 @@
                     <connections>
                         <outlet property="CallBtn" destination="Vdl-h7-xHW" id="hp6-nL-e9d"/>
                         <outlet property="Confidence" destination="wCi-ax-1Sv" id="PN3-AB-cxO"/>
+                        <outlet property="textView" destination="B03-H4-RVz" id="6No-Eh-V2f"/>
                         <outlet property="virus" destination="4D0-p0-kP0" id="Rw9-ea-Coh"/>
                         <segue destination="Dez-Nc-wgh" kind="show" identifier="startCall" id="Cpm-nD-QuV"/>
                     </connections>
@@ -491,9 +492,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FfO-De-AUW"/>
-        <segue reference="DCd-CZ-ocR"/>
-        <segue reference="QZ9-ZH-eSg"/>
+        <segue reference="Chg-Ac-rPB"/>
+        <segue reference="Vad-Ja-M2W"/>
+        <segue reference="4cH-fV-nBo"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="TeleMedML.png" width="716" height="688"/>

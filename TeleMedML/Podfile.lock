@@ -4,19 +4,23 @@ PODS:
     - Parse/Core (= 1.18.0)
   - Parse/Core (1.18.0):
     - Bolts/Tasks (= 1.9.1)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Parse
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Bolts
     - Parse
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   Parse: 79bdda34fdb7eb2a707a43a951c8aae236cb3e34
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: f00389fabf1906b5019c6ceb602a0351fd79c143
+PODFILE CHECKSUM: 3e6c1323e4a63b0b404983df1b607640cf41e83a
 
 COCOAPODS: 1.9.1
